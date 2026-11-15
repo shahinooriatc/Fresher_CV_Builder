@@ -1,0 +1,57 @@
+/* One block per template. Each block only styles its own .cv--<id> sheet. */
+
+/* ---------- 1. Classic Professional ---------- */
+.cv--classic { padding: 50px 56px; font-family: Georgia, "Times New Roman", "Noto Serif Bengali", serif; }
+.cv--classic .cv-head { position: relative; text-align: center; padding-bottom: 14px; border-bottom: 2px solid #1f2328; }
+.cv--classic .cv-head.has-photo { min-height: 136px; padding: 0 112px 14px; }
+.cv--classic .cv-photo { position: absolute; right: 0; top: 0; width: 96px; height: 120px; border: 1px solid #c9ced6; }
+.cv--classic h1 { font-size: 30px; letter-spacing: .5px; }
+.cv--classic .cv-title { margin-top: 2px; font-size: 15px; font-style: italic; color: #444; }
+.cv--classic .cv-contactline { margin-top: 8px; font-size: 12.5px; }
+.cv--classic .cv-h { margin-bottom: 8px; padding-bottom: 3px; border-bottom: 1px solid #1f2328; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; }
+
+/* ---------- 2. Fresher ---------- */
+.cv--fresher { padding: 44px 50px; }
+.cv--fresher .cv-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding-bottom: 16px; border-bottom: 3px solid #0b5cad; }
+.cv--fresher h1 { font-size: 28px; color: #0b5cad; }
+.cv--fresher .cv-title { margin-top: 2px; font-size: 15px; font-weight: 600; }
+.cv--fresher .cv-contactlist { margin-top: 8px; font-size: 12.5px; line-height: 1.55; }
+.cv--fresher .cv-photo { width: 108px; height: 135px; border: 1px solid #c9ced6; border-radius: 4px; }
+.cv--fresher .cv-h { margin-bottom: 9px; padding: 4px 10px; background: #eaf2fb; border-left: 4px solid #0b5cad; color: #0b3d73; font-size: 13px; letter-spacing: .6px; text-transform: uppercase; }
+
+/* ---------- 3. Modern Two-Column ---------- */
+.cv--modern { display: grid; grid-template-columns: 270px minmax(0, 1fr); }
+.cv--modern .cv-side { min-width: 0; padding: 40px 26px; background: #1f2a44; color: #e6eaf2; font-size: 12.5px; }
+.cv--modern .cv-side .cv-photo { width: 132px; height: 132px; margin: 0 auto 6px; border-radius: 50%; border: 3px solid rgba(255, 255, 255, .85); }
+.cv--modern .cv-side .cv-h { margin-bottom: 9px; padding-bottom: 4px; border-bottom: 1px solid rgba(255, 255, 255, .3); color: #fff; font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase; }
+.cv--modern .cv-side .cv-sec { margin-top: 22px; }
+.cv--modern .cv-contact small { color: #9fb0cf; }
+.cv--modern .cv-main { min-width: 0; padding: 40px 38px; }
+.cv--modern h1 { font-size: 32px; line-height: 1.15; color: #1f2a44; }
+.cv--modern .cv-title { margin-top: 4px; color: #2f6fed; font-size: 15px; font-weight: 600; letter-spacing: .4px; }
+.cv--modern .cv-main .cv-h { margin-bottom: 8px; padding-bottom: 3px; border-bottom: 1px solid #d5dbe6; color: #2f6fed; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; }
+
+/* ---------- 4. Creative / Marketing ---------- */
+.cv--creative { display: flex; flex-direction: column; }
+.cv--creative .cv-head { display: flex; align-items: center; gap: 24px; padding: 38px 44px; color: #fff; background: linear-gradient(135deg, #6d28d9, #db2777); }
+.cv--creative .cv-photo { width: 118px; height: 118px; border-radius: 50%; border: 4px solid rgba(255, 255, 255, .9); }
+.cv--creative h1 { font-size: 34px; line-height: 1.1; font-weight: 800; }
+.cv--creative .cv-title { margin-top: 6px; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+.cv--creative .cv-contactline { margin-top: 10px; font-size: 12.5px; }
+.cv--creative .cv-head .cv-sep { color: rgba(255, 255, 255, .6); }
+.cv--creative .cv-cols { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 250px; }
+.cv--creative .cv-main { min-width: 0; padding: 8px 32px 40px 44px; }
+.cv--creative .cv-side { min-width: 0; padding: 8px 24px 40px; background: #f6f3fb; font-size: 12.5px; }
+.cv--creative .cv-h { margin-bottom: 8px; color: #6d28d9; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; }
+.cv--creative .cv-tags span { background: #fff; border-color: #d9cdf3; color: #4c1d95; }
+.cv--creative .cv-stack .cv-kv { display: block; }
+.cv--creative .cv-stack .cv-kv + .cv-kv { margin-top: 7px; }
+.cv--creative .cv-stack .cv-kv > span:first-child { display: block; color: #7c6aa6; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; }
+
+/* ---------- 5. ATS Minimal ---------- */
+.cv--ats { padding: 48px 56px; font-family: Arial, Helvetica, sans-serif; color: #000; }
+.cv--ats h1 { font-size: 24px; }
+.cv--ats .cv-title { font-size: 14px; }
+.cv--ats .cv-contactline { margin-top: 4px; font-size: 12.5px; }
+.cv--ats .cv-h { margin-bottom: 7px; padding-bottom: 2px; border-bottom: 1px solid #000; font-size: 13px; text-transform: uppercase; }
+.cv--ats .cv-date, .cv--ats .cv-sub, .cv--ats .cv-light, .cv--ats .cv-sep { color: #000; }
