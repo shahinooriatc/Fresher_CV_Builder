@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>CV Builder | ICTebook</title>
   <meta name="description" content="Free CV and resume builder for students and fresh graduates. Fill in your details, pick a template, download as PDF, image or HTML.">
-  <meta name="theme-color" content="#f2f2f7">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23007aff'/%3E%3Ctext x='16' y='21' font-family='Arial' font-size='13' font-weight='700' fill='%23fff' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#eef2f8">
+  <!-- Sets the dark theme before the page paints, so there is no white flash -->
+  <script>(function(){try{var t=localStorage.getItem("cvb:theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}})()</script>
+  <!-- Same fonts as ICTebook: Noto Sans Bengali for text, Anek Bangla for headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@600;700&family=Noto+Sans+Bengali:wght@400;500;600&display=swap">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='21' font-family='Arial' font-size='13' font-weight='700' fill='%23fff' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/cv.css">
   <link rel="stylesheet" href="css/templates.css">

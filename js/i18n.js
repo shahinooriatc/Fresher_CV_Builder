@@ -9,6 +9,9 @@ export const getLang = () => lang;
 export function setLang(next) { lang = next; ls.set(KEY, next); document.documentElement.lang = next; }
 
 // tr({bn, en}) picks the current language from a label object.
+// Digits in the interface language: num(3) -> "৩" in Bangla.
+export const num = (n) => (lang === 'bn' ? String(n).replace(/\d/g, (d) => '০১২৩৪৫৬৭৮৯'[d]) : String(n));
+
 export const tr = (label) => (label && typeof label === 'object' ? label[lang] ?? label.en : label ?? '');
 
 const STR = {
@@ -32,7 +35,17 @@ const STR = {
   needName: { bn: 'আগে আপনার পূর্ণ নাম লিখুন।', en: 'Please enter your full name first.' },
   add: { bn: 'আরও যোগ করুন', en: 'Add another' },
   remove: { bn: 'মুছুন', en: 'Remove' },
-  choosePhoto: { bn: 'ছবি বাছুন', en: 'Choose photo' },
+  uploadPhoto: { bn: 'ছবি আপলোড করুন', en: 'Upload photo' },
+  photoTitle: { bn: 'পাসপোর্ট সাইজ ছবি', en: 'Passport-size photo' },
+  photoTip1: { bn: 'সাদা বা হালকা ব্যাকগ্রাউন্ড', en: 'Plain, light background' },
+  photoTip2: { bn: 'সোজা তাকিয়ে, মুখ স্পষ্ট', en: 'Face the camera, clear face' },
+  photoTip3: { bn: 'ফরমাল পোশাক', en: 'Formal dress' },
+  sample: { bn: 'নমুনা', en: 'Sample' },
+  step: { bn: 'ধাপ', en: 'Step' },
+  theme: { bn: 'থিম বদলান', en: 'Change theme' },
+  feat1: { bn: '৫টি টেমপ্লেট', en: '5 templates' },
+  feat2: { bn: 'PDF · ছবি · HTML', en: 'PDF · Image · HTML' },
+  feat3: { bn: 'সম্পূর্ণ ফ্রি', en: 'Completely free' },
   changePhoto: { bn: 'ছবি বদলান', en: 'Change photo' },
   badPhoto: { bn: 'ছবিটি পড়া যায়নি। অন্য ছবি দিন।', en: 'Could not read that image. Try another one.' },
   saveFailed: { bn: 'সেভ করা যায়নি। ব্রাউজারের স্টোরেজ ভরে গেছে।', en: 'Could not save. Browser storage is full.' },

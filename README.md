@@ -20,6 +20,7 @@ account). Nothing is written to the ICTebook database.
 
 ```
 index.html
+assets/            ICTebook logos (light/dark) and the sample passport photo
 css/
   app.css          interface (mobile first)
   cv.css           base styles shared by all CV templates + print rules
@@ -33,6 +34,7 @@ js/
   export.js        PDF / PNG / HTML / print
   app.js           entry point: screens and click handling
   utils.js         small helpers
+  icons.js         inline SVG icons for buttons
   views/           form.js, review.js, preview.js (HTML for each screen)
   templates/       helpers.js (shared CV parts), index.js (registry),
                    classic.js, fresher.js, modern.js, creative.js, ats.js

@@ -2,6 +2,7 @@
 import { TEMPLATES, getTemplate } from '../templates/index.js';
 import { buildView } from '../templates/helpers.js';
 import { t, tr } from '../i18n.js';
+import { ICON } from '../icons.js';
 import { esc } from '../utils.js';
 
 export const CV_WIDTH = 794; // A4 at 96 dpi
@@ -18,16 +19,16 @@ export function previewView(data, templateId) {
     </button>`).join('');
 
   return `<div class="subbar">
-      <button class="btn btn-text" data-action="review">‹ ${t('editInfo')}</button>
+      <button class="btn btn-chip" data-action="review">${ICON.left}<span>${t('editInfo')}</span></button>
       <span class="muted">${t('chooseTemplate')}</span>
     </div>
     <div class="picker">${picker}</div>
     <div class="stage" id="stage"><div class="scaler" id="scaler">${getTemplate(templateId).render(view)}</div></div>
     <div class="actionbar">
-      <button class="btn btn-primary grow" data-action="download" data-kind="pdf">${t('pdf')}</button>
-      <button class="btn btn-soft grow" data-action="download" data-kind="png">${t('image')}</button>
-      <button class="btn btn-soft grow" data-action="download" data-kind="html">${t('html')}</button>
-      <button class="btn btn-soft grow" data-action="download" data-kind="print">${t('print')}</button>
+      <button class="btn btn-primary grow" data-action="download" data-kind="pdf">${ICON.download}<span>${t('pdf')}</span></button>
+      <button class="btn btn-outline grow" data-action="download" data-kind="png"><span>${t('image')}</span></button>
+      <button class="btn btn-outline grow" data-action="download" data-kind="html"><span>${t('html')}</span></button>
+      <button class="btn btn-outline grow" data-action="download" data-kind="print"><span>${t('print')}</span></button>
     </div>`;
 }
 
